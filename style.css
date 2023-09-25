@@ -1,0 +1,254 @@
+*{
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+font-family: 'Work Sans' ,sans-serif;
+margin: 0;
+padding: 0;
+}
+
+
+:root{
+--main-color: #10cab7;
+}
+
+.parent{
+background: #eee;
+}
+
+.content{
+margin: 0 auto;
+padding: 0 15px;
+}
+
+.special-heading{
+color: #cdd0d2;
+text-align: center;
+font-size: 100px;
+letter-spacing: 2px;
+margin: 0;
+}
+
+.special-heading + p{
+margin: -30px 0 0;
+font-size: 20px;
+text-align: center;
+color: #797979;
+}
+
+@media(max-width: 767px){
+.special-heading{
+font-size: 60px;
+}
+
+.special-heading + p{
+margin-top: -20px;
+}
+
+
+}
+
+
+/* media */
+
+@media(min-width: 768px){
+.content{
+width: 750px;
+}
+}
+
+@media(min-width: 400px){
+.content{
+width: 350px;
+
+}
+
+}
+
+
+@media(min-width: 992px){
+.content{
+width: 950px;
+
+}
+
+}
+
+@media(min-width: 1200px){
+.content{
+width: 1170px;
+}
+}
+
+/* header */
+
+header{
+padding: 20px;
+}
+
+header .content{
+display: flex;
+align-items: center;
+justify-content: space-between;
+}
+
+
+header .logo{
+width: 60px;
+}
+
+nav{
+position: relative;
+transition: 0.5s ease;
+}
+
+nav:hover .icon span:nth-child(2){
+width: 100%;
+
+}
+
+
+
+
+
+header span.icon{
+display: flex;
+flex-wrap: wrap;
+width: 30px;
+justify-content: flex-end;
+}
+
+header span.icon span{
+margin-bottom: 5px;
+background-color: #333;
+height: 2px;
+}
+
+header span.icon span:first-child{
+width: 100%;
+}
+
+header span.icon span:nth-child(2){
+width: 50%;
+transition: 0.5s ease;
+}
+
+header span.icon span:last-child{
+width: 100%;
+}
+
+
+nav ul{
+list-style: none;
+position: absolute;
+right: 0;
+background-color: #eee;
+margin: 0;
+padding: 0;
+top: calc(100% + 15px);
+min-width: 200px;
+display: none;
+transition: 0.5s ease;
+z-index: 1;
+}
+
+nav ul::before{
+position: absolute;
+top: -20px;
+right: 5px;
+background: #eee;
+border: 5px solid #eee;
+
+}
+
+nav:hover ul {
+display: block;
+
+}
+
+nav ul a{
+display: block;
+padding: 15px;
+text-decoration: none;
+color: #333;
+transition: 0.5s ease;
+}
+
+
+
+
+
+nav ul a:hover{
+padding-left: 25px;
+}
+
+nav ul li:not(:last-child) a{
+border-bottom: 1px solid #ddd;
+
+}
+
+/* landing */
+
+.landing{
+background: url(pexels-eberhard-grossgasteiger-1287145.jpg);
+background-size: cover;
+height: calc(100vh - 64px);
+position: relative;
+}
+
+.landing .center-text{
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50% ,-50%);
+text-align: center;
+width: 320px;
+max-width: 100%;
+}
+
+.landing .center-text h1{
+font-size: 50px;
+font-weight: bold;
+color: var(--main-color);
+margin: 0;
+}
+
+.landing .center-text p{
+font-size: 19px;
+line-height: 1.8;
+
+}
+
+/* features */
+
+.features{
+padding-top: 60px;
+padding-bottom: 60px;
+background: #f6f6f6;
+}
+
+.features .content{
+display: grid;
+grid-template-columns: repeat(auto-fill,minmax(350px,1fr));
+grid-gap: 20px;
+}
+
+.features .feat{
+padding: 20px;
+text-align: center;
+}
+
+.features .feat i{
+color: var(--main-color);
+}
+
+.features .feat h3{
+font-weight: 800;
+margin: 30px 0;
+}
+
+.features .feat p{
+line-height: 1.6;
+font-size: 17px;
+color: #333;
+}
